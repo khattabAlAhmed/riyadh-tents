@@ -1,7 +1,12 @@
 {
     "HomePage": {
         "title": "Riyadh Tents",
-        "welcome": "Welcome to Riyadh Tents!"
+        "welcome": "Welcome to Riyadh Tents!",
+        "seo": {
+            "title": "Riyadh Tents - Premium Event Tents & Shades Saudi Arabia",
+            "description": "Leading provider of luxury tents, royal marquees, event structures, and car parking shades in Riyadh and Saudi Arabia. Expert installation and custom designs.",
+            "keywords": "tents Riyadh, royal tents, event marquees, wedding tents, car shades, tensile structures, Saudi Arabia tents, exhibition tents"
+        }
     },
     "HeroSection": {
         "slides": {
