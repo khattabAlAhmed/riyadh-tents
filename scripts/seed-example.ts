@@ -1,5 +1,5 @@
 import { drizzle } from "drizzle-orm/node-postgres";
-import { item } from "../src/lib/db/schema/academy-schema";
+import { item } from "../src/lib/db/schema/website-schema";
 import { nanoid } from "nanoid";
 import pg from "pg";
 import "dotenv/config";

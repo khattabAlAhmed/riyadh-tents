@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "@/lib/db/drizzle";
-import { item } from "@/lib/db/schema/academy-schema";
+import { item } from "@/lib/db/schema/website-schema";
 
 // Type definitions for your items
 export type Item = {

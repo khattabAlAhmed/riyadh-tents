@@ -1,7 +1,7 @@
 import * as authSchema from "./auth-schema";
-import * as academySchema from "./academy-schema";
+import * as websiteSchema from "./website-schema";
 
 export const schema = {
     ...authSchema,
-    ...academySchema,
+    ...websiteSchema,
 }
