@@ -1,12 +1,16 @@
 'use client';
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 
 interface ProjectCardProps {
     project?: {
         id: string;
         titleEn: string;
         titleAr: string;
+        slugEn: string;
+        slugAr: string;
         descriptionEn: string;
         descriptionAr: string;
         imageUrls: string[];
@@ -17,6 +21,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, isLoading = false }: ProjectCardProps) {
     const locale = useLocale();
+    const t = useTranslations('common');
 
     if (isLoading) {
         return (
@@ -27,6 +32,7 @@ export function ProjectCard({ project, isLoading = false }: ProjectCardProps) {
                         <div className="h-4 bg-muted/50 rounded w-24" />
                         <div className="h-6 bg-muted/50 rounded w-3/4" />
                         <div className="h-4 bg-muted/50 rounded w-full" />
+                        <div className="h-8 bg-muted/50 rounded w-28 mt-2" />
                     </div>
                 </div>
             </div>
@@ -37,11 +43,13 @@ export function ProjectCard({ project, isLoading = false }: ProjectCardProps) {
 
     const title = locale === 'ar' ? project.titleAr : project.titleEn;
     const description = locale === 'ar' ? project.descriptionAr : project.descriptionEn;
+    const slug = locale === 'ar' ? project.slugAr : project.slugEn;
     const imageUrl = project.imageUrls[0] || '/assets/placeholder.png';
     const formattedDate = new Date(project.date).toLocaleDateString(locale === 'ar' ? 'ar-SA' : 'en-US', {
         year: 'numeric',
         month: 'long',
     });
+    const ArrowIcon = locale === 'ar' ? ArrowLeft : ArrowRight;
 
     return (
         <div className="group relative overflow-hidden rounded-xl bg-card border border-border shadow-sm hover:shadow-xl transition-all duration-300">
@@ -58,9 +66,16 @@ export function ProjectCard({ project, isLoading = false }: ProjectCardProps) {
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {title}
                 </h3>
-                <p className="text-white/80 text-sm line-clamp-2">
+                <p className="text-white/80 text-sm line-clamp-2 mb-4">
                     {description}
                 </p>
+                <Link
+                    href={`/projects/${slug}`}
+                    className="inline-flex items-center gap-2 text-white font-medium hover:text-primary transition-colors"
+                >
+                    {t('showMore')}
+                    <ArrowIcon className="w-4 h-4" />
+                </Link>
             </div>
         </div>
     );

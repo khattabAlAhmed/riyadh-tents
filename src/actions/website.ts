@@ -12,6 +12,8 @@ export type Service = {
     id: string;
     nameEn: string;
     nameAr: string;
+    slugEn: string;
+    slugAr: string;
     descriptionEn: string;
     descriptionAr: string;
     imageUrls: string[];
@@ -28,6 +30,8 @@ export type Tent = {
     id: string;
     nameEn: string;
     nameAr: string;
+    slugEn: string;
+    slugAr: string;
     descriptionEn: string;
     descriptionAr: string;
     imageUrls: string[];
@@ -42,6 +46,8 @@ export type Project = {
     id: string;
     titleEn: string;
     titleAr: string;
+    slugEn: string;
+    slugAr: string;
     descriptionEn: string;
     descriptionAr: string;
     imageUrls: string[];

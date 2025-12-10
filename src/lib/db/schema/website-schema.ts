@@ -21,9 +21,15 @@ export const tent = pgTable("tent", {
     id: text("id").primaryKey(),
     nameAr: text("name_ar").notNull(),
     nameEn: text("name_en").notNull(),
+    slugAr: text("slug_ar").notNull(),
+    slugEn: text("slug_en").notNull(),
     descriptionAr: text("description_ar").notNull(),
     descriptionEn: text("description_en").notNull(),
     imageUrls: json("image_urls").$type<string[]>().default([]).notNull(),
+    keywordsAr: json("keywords_ar").$type<string[]>().default([]).notNull(),
+    keywordsEn: json("keywords_en").$type<string[]>().default([]).notNull(),
+    tagsAr: json("tags_ar").$type<string[]>().default([]).notNull(),
+    tagsEn: json("tags_en").$type<string[]>().default([]).notNull(),
     maxWidth: real("max_width").notNull(), // max meters width
     maxHeight: real("max_height").notNull(), // max meters height
     tentTypeId: text("tent_type_id")
@@ -63,9 +69,15 @@ export const service = pgTable("service", {
     id: text("id").primaryKey(),
     nameEn: text("name_en").notNull(),
     nameAr: text("name_ar").notNull(),
+    slugAr: text("slug_ar").notNull(),
+    slugEn: text("slug_en").notNull(),
     imageUrls: json("image_urls").$type<string[]>().default([]).notNull(),
     descriptionAr: text("description_ar").notNull(),
     descriptionEn: text("description_en").notNull(),
+    keywordsAr: json("keywords_ar").$type<string[]>().default([]).notNull(),
+    keywordsEn: json("keywords_en").$type<string[]>().default([]).notNull(),
+    tagsAr: json("tags_ar").$type<string[]>().default([]).notNull(),
+    tagsEn: json("tags_en").$type<string[]>().default([]).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at")
         .defaultNow()
@@ -80,9 +92,15 @@ export const project = pgTable("project", {
     id: text("id").primaryKey(),
     titleAr: text("title_ar").notNull(),
     titleEn: text("title_en").notNull(),
+    slugAr: text("slug_ar").notNull(),
+    slugEn: text("slug_en").notNull(),
     imageUrls: json("image_urls").$type<string[]>().default([]).notNull(),
     descriptionAr: text("description_ar").notNull(),
     descriptionEn: text("description_en").notNull(),
+    keywordsAr: json("keywords_ar").$type<string[]>().default([]).notNull(),
+    keywordsEn: json("keywords_en").$type<string[]>().default([]).notNull(),
+    tagsAr: json("tags_ar").$type<string[]>().default([]).notNull(),
+    tagsEn: json("tags_en").$type<string[]>().default([]).notNull(),
     date: timestamp("date").notNull(),
     tentId: text("tent_id").references(() => tent.id, { onDelete: "set null" }),
     tentTypeId: text("tent_type_id").references(() => tentType.id, {

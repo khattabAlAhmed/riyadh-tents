@@ -19,9 +19,12 @@
             }
         },
         "buttons": {
-            "getStarted": "احصل على عرض سعر",
-            "learnMore": "خدماتنا"
+            "whatsapp": "تواصل عبر واتساب",
+            "callUs": "اتصل بنا"
         }
+    },
+    "common": {
+        "showMore": "عرض المزيد"
     },
     "WhoWeAreSection": {
         "subtitle": "من نحن",

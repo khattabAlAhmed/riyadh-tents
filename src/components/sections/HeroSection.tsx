@@ -2,9 +2,11 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MessageCircle, Phone } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
-import Link from 'next/link';
+
+const WHATSAPP_NUMBER = '966XXXXXXXXX'; // Replace with actual number
+const PHONE_NUMBER = '+966XXXXXXXXX'; // Replace with actual number
 
 interface Slide {
     id: string;
@@ -187,16 +189,20 @@ const HeroSection = () => {
                             ref={buttonsRef}
                             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                         >
-                            <Link href="/dashboard" className="group relative px-6 py-3 md:px-8 md:py-4 bg-white text-gray-900 rounded-lg font-semibold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[160px] md:min-w-[200px] inline-flex items-center justify-center">
-                                <span className="relative z-10">{t('buttons.getStarted')}</span>
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                <span className="absolute inset-0 z-10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">
-                                    {t('buttons.getStarted')}
-                                </span>
-                            </Link>
-                            <button className="group relative px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[160px] md:min-w-[200px]">
+                            <button
+                                onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank')}
+                                className="group relative px-6 py-3 md:px-8 md:py-4 bg-[#25D366] text-white rounded-lg font-semibold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[160px] md:min-w-[200px] inline-flex items-center justify-center gap-2"
+                            >
+                                <MessageCircle className="w-5 h-5" />
+                                <span>{t('buttons.whatsapp')}</span>
+                            </button>
+                            <button
+                                onClick={() => window.location.href = `tel:${PHONE_NUMBER}`}
+                                className="group relative px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[160px] md:min-w-[200px] inline-flex items-center justify-center gap-2"
+                            >
+                                <Phone className="w-5 h-5 relative z-10 group-hover:text-gray-900 transition-colors duration-300" />
                                 <span className="relative z-10 group-hover:text-gray-900 transition-colors duration-300">
-                                    {t('buttons.learnMore')}
+                                    {t('buttons.callUs')}
                                 </span>
                                 <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                             </button>

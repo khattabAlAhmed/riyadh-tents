@@ -1,13 +1,16 @@
 'use client';
 
-import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 
 interface TentCardProps {
     tent?: {
         id: string;
         nameEn: string;
         nameAr: string;
+        slugEn: string;
+        slugAr: string;
         descriptionEn: string;
         descriptionAr: string;
         imageUrls: string[];
@@ -24,6 +27,7 @@ interface TentCardProps {
 export function TentCard({ tent, isLoading = false }: TentCardProps) {
     const locale = useLocale();
     const t = useTranslations('TentsSection');
+    const tCommon = useTranslations('common');
 
     if (isLoading) {
         return (
@@ -40,6 +44,7 @@ export function TentCard({ tent, isLoading = false }: TentCardProps) {
                         <div className="h-4 bg-muted rounded w-20" />
                         <div className="h-4 bg-muted rounded w-20" />
                     </div>
+                    <div className="h-9 bg-muted rounded w-28 mt-4" />
                 </div>
             </div>
         );
@@ -49,10 +54,12 @@ export function TentCard({ tent, isLoading = false }: TentCardProps) {
 
     const name = locale === 'ar' ? tent.nameAr : tent.nameEn;
     const description = locale === 'ar' ? tent.descriptionAr : tent.descriptionEn;
+    const slug = locale === 'ar' ? tent.slugAr : tent.slugEn;
     const typeName = tent.tentType
         ? (locale === 'ar' ? tent.tentType.typeNameAr : tent.tentType.typeNameEn)
         : '';
     const imageUrl = tent.imageUrls[0] || '/assets/placeholder.png';
+    const ArrowIcon = locale === 'ar' ? ArrowLeft : ArrowRight;
 
     return (
         <div className="group relative overflow-hidden rounded-xl bg-card border border-border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -75,7 +82,7 @@ export function TentCard({ tent, isLoading = false }: TentCardProps) {
                 <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
                     {description}
                 </p>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                     <span className="flex items-center gap-1">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
@@ -89,6 +96,13 @@ export function TentCard({ tent, isLoading = false }: TentCardProps) {
                         {t('maxHeight')}: {tent.maxHeight}m
                     </span>
                 </div>
+                <Link
+                    href={`/tents/${slug}`}
+                    className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition-colors"
+                >
+                    {tCommon('showMore')}
+                    <ArrowIcon className="w-4 h-4" />
+                </Link>
             </div>
         </div>
     );

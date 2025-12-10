@@ -19,9 +19,12 @@
             }
         },
         "buttons": {
-            "getStarted": "Get Quote",
-            "learnMore": "Our Services"
+            "whatsapp": "Chat on WhatsApp",
+            "callUs": "Call Us"
         }
+    },
+    "common": {
+        "showMore": "Show More"
     },
     "WhoWeAreSection": {
         "subtitle": "About Us",
