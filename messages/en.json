@@ -57,6 +57,15 @@
         "description": "Comprehensive tent and event solutions tailored to your needs",
         "noServices": "No services available at the moment"
     },
+    "ServicePage": {
+        "backToServices": "Back to Services",
+        "aboutService": "About This Service",
+        "gallery": "Gallery",
+        "interestedInService": "Interested in this service?",
+        "contactUsDescription": "Contact us today for a free consultation and quote.",
+        "chatOnWhatsApp": "Chat on WhatsApp",
+        "callUs": "Call Us"
+    },
     "TentsSection": {
         "subtitle": "Our Collection",
         "title": "Premium Tents",

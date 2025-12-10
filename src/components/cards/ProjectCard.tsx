@@ -63,7 +63,7 @@ export function ProjectCard({ project, isLoading = false }: ProjectCardProps) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                 <span className="text-sm text-white/80 mb-2">{formattedDate}</span>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-2  transition-colors">
                     {title}
                 </h3>
                 <p className="text-white/80 text-sm line-clamp-2 mb-4">

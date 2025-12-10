@@ -2,7 +2,7 @@
 
 import { db } from "@/lib/db/drizzle";
 import { service, tent, tentType, project, review } from "@/lib/db/schema/website-schema";
-import { eq } from "drizzle-orm";
+import { eq, or } from "drizzle-orm";
 
 // ============================================
 // Type Definitions
@@ -81,6 +81,24 @@ export type Review = {
 export async function getServices(): Promise<Service[]> {
     const result = await db.select().from(service);
     return result as Service[];
+}
+
+/**
+ * Fetch a single service by slug (searches both Arabic and English slugs)
+ */
+export async function getServiceBySlug(slug: string, _locale: string): Promise<Service | null> {
+    // Decode the slug in case it's URL-encoded (for Arabic slugs)
+    const decodedSlug = decodeURIComponent(slug);
+
+    // Search both Arabic and English slugs
+    const result = await db.select().from(service).where(
+        or(
+            eq(service.slugEn, decodedSlug),
+            eq(service.slugAr, decodedSlug)
+        )
+    ).limit(1);
+
+    return result.length > 0 ? (result[0] as Service) : null;
 }
 
 /**

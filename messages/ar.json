@@ -57,6 +57,15 @@
         "description": "حلول شاملة للخيام والفعاليات مصممة حسب احتياجاتك",
         "noServices": "لا توجد خدمات متاحة حالياً"
     },
+    "ServicePage": {
+        "backToServices": "العودة للخدمات",
+        "aboutService": "عن هذه الخدمة",
+        "gallery": "معرض الصور",
+        "interestedInService": "مهتم بهذه الخدمة؟",
+        "contactUsDescription": "تواصل معنا اليوم للحصول على استشارة وعرض سعر مجاني.",
+        "chatOnWhatsApp": "تواصل عبر واتساب",
+        "callUs": "اتصل بنا"
+    },
     "TentsSection": {
         "subtitle": "مجموعتنا",
         "title": "خيام فاخرة",
