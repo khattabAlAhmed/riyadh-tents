@@ -4,8 +4,8 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '966XXXXXXXXX'; // Replace with actual number
-const PHONE_NUMBER = '+966XXXXXXXXX'; // Replace with actual number
+const WHATSAPP_NUMBER = '966552248896'; // Replace with actual number
+const PHONE_NUMBER = '+966552248896'; // Replace with actual number
 
 const ContactSection = () => {
     const t = useTranslations('ContactSection');

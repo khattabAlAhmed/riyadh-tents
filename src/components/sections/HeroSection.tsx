@@ -5,8 +5,8 @@ import { gsap } from 'gsap';
 import { ChevronLeft, ChevronRight, MessageCircle, Phone } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 
-const WHATSAPP_NUMBER = '966XXXXXXXXX'; // Replace with actual number
-const PHONE_NUMBER = '+966XXXXXXXXX'; // Replace with actual number
+const WHATSAPP_NUMBER = '966552248896'; // Replace with actual number
+const PHONE_NUMBER = '+966552248896'; // Replace with actual number
 
 interface Slide {
     id: string;

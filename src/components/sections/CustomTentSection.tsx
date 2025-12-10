@@ -2,53 +2,53 @@
 
 import { useEffect, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { getTentTypes, type TentType } from '@/actions/website';
+import { getTents, type Tent } from '@/actions/website';
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '966XXXXXXXXX'; // Replace with actual number
+const WHATSAPP_NUMBER = '966552248896'; // Replace with actual number
 
 const CustomTentSection = () => {
     const t = useTranslations('CustomTentSection');
     const locale = useLocale();
-    const [tentTypes, setTentTypes] = useState<TentType[]>([]);
+    const [tents, setTents] = useState<Tent[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [selectedTentTypeId, setSelectedTentTypeId] = useState<string>('');
+    const [selectedTentId, setSelectedTentId] = useState<string>('');
     const [width, setWidth] = useState<string>('');
     const [height, setHeight] = useState<string>('');
 
     useEffect(() => {
-        const fetchTentTypes = async () => {
+        const fetchTents = async () => {
             try {
-                const data = await getTentTypes();
-                setTentTypes(data);
+                const data = await getTents();
+                setTents(data);
                 if (data.length > 0) {
-                    setSelectedTentTypeId(data[0].id);
+                    setSelectedTentId(data[0].id);
                 }
             } catch (error) {
-                console.error('Failed to fetch tent types:', error);
+                console.error('Failed to fetch tents:', error);
             } finally {
                 setIsLoading(false);
             }
         };
 
-        fetchTentTypes();
+        fetchTents();
     }, []);
 
-    const getSelectedTentTypeName = () => {
-        const selected = tentTypes.find(t => t.id === selectedTentTypeId);
+    const getSelectedTentName = () => {
+        const selected = tents.find(t => t.id === selectedTentId);
         if (!selected) return '';
-        return locale === 'ar' ? selected.typeNameAr : selected.typeNameEn;
+        return locale === 'ar' ? selected.nameAr : selected.nameEn;
     };
 
     const handleWhatsAppOrder = () => {
-        const tentTypeName = getSelectedTentTypeName();
+        const tentName = getSelectedTentName();
         let message = '';
 
         if (locale === 'ar') {
-            message = `مرحباً، أود طلب خيمة من نوع "${tentTypeName}" بمقاسات ${width}م × ${height}م`;
+            message = `مرحباً، أود طلب خيمة "${tentName}" بمقاسات ${width}م × ${height}م`;
         } else {
-            message = `Hello, I would like to order a "${tentTypeName}" tent with dimensions ${width}m x ${height}m`;
+            message = `Hello, I would like to order a "${tentName}" tent with dimensions ${width}m x ${height}m`;
         }
 
         const encodedMessage = encodeURIComponent(message);
@@ -56,7 +56,7 @@ const CustomTentSection = () => {
         window.open(whatsappUrl, '_blank');
     };
 
-    const isFormValid = selectedTentTypeId && width && height && parseFloat(width) > 0 && parseFloat(height) > 0;
+    const isFormValid = selectedTentId && width && height && parseFloat(width) > 0 && parseFloat(height) > 0;
 
     return (
         <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-primary/10">
@@ -78,22 +78,22 @@ const CustomTentSection = () => {
                     {/* Form Card */}
                     <div className="bg-card border border-border rounded-2xl p-8 shadow-xl">
                         <div className="grid md:grid-cols-3 gap-6 mb-8">
-                            {/* Tent Type Select */}
+                            {/* Tent Select */}
                             <div className="space-y-2">
                                 <label className="block text-sm font-medium text-foreground">
-                                    {t('tentTypeLabel')}
+                                    {t('tentLabel')}
                                 </label>
                                 {isLoading ? (
                                     <div className="h-12 bg-muted animate-pulse rounded-lg" />
                                 ) : (
                                     <select
-                                        value={selectedTentTypeId}
-                                        onChange={(e) => setSelectedTentTypeId(e.target.value)}
+                                        value={selectedTentId}
+                                        onChange={(e) => setSelectedTentId(e.target.value)}
                                         className="w-full h-12 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
                                     >
-                                        {tentTypes.map((type) => (
-                                            <option key={type.id} value={type.id}>
-                                                {locale === 'ar' ? type.typeNameAr : type.typeNameEn}
+                                        {tents.map((tent) => (
+                                            <option key={tent.id} value={tent.id}>
+                                                {locale === 'ar' ? tent.nameAr : tent.nameEn}
                                             </option>
                                         ))}
                                     </select>

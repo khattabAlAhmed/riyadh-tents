@@ -84,7 +84,7 @@
         "subtitle": "Custom Order",
         "title": "Design Your Perfect Tent",
         "description": "Choose your tent type and dimensions, and we'll prepare a custom quote for you",
-        "tentTypeLabel": "Tent Type",
+        "tentLabel": "Select Tent",
         "widthLabel": "Width",
         "heightLabel": "Height",
         "widthPlaceholder": "Enter width",

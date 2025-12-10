@@ -84,7 +84,7 @@
         "subtitle": "طلب مخصص",
         "title": "صمم خيمتك المثالية",
         "description": "اختر نوع الخيمة والأبعاد، وسنقوم بإعداد عرض سعر مخصص لك",
-        "tentTypeLabel": "نوع الخيمة",
+        "tentLabel": "اختر الخيمة",
         "widthLabel": "العرض",
         "heightLabel": "الارتفاع",
         "widthPlaceholder": "أدخل العرض",

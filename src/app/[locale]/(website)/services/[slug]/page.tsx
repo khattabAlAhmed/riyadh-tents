@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, MessageCircle, Phone } from "lucide-react";
 
-const WHATSAPP_NUMBER = '966XXXXXXXXX'; // Replace with actual number
-const PHONE_NUMBER = '+966XXXXXXXXX'; // Replace with actual number
+const WHATSAPP_NUMBER = '966552248896'; // Replace with actual number
+const PHONE_NUMBER = '+966552248896'; // Replace with actual number
 
 interface ServicePageProps {
     params: Promise<{
