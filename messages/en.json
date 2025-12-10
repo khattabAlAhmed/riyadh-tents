@@ -1,26 +1,104 @@
 {
     "HomePage": {
-        "title": "My App",
-        "welcome": "Welcome to our application!"
+        "title": "Riyadh Tents",
+        "welcome": "Welcome to Riyadh Tents!"
     },
     "HeroSection": {
         "slides": {
             "welcome": {
-                "title": "Welcome to Our Platform",
-                "caption": "Build amazing applications with our starter template"
+                "title": "Premium Tents for Every Occasion",
+                "caption": "Quality tent solutions for events, weddings, and outdoor gatherings"
             },
-            "features": {
-                "title": "Modern Tech Stack",
-                "caption": "Built with Next.js, TypeScript, and Tailwind CSS"
+            "services": {
+                "title": "Complete Event Solutions",
+                "caption": "From installation to decoration, we handle everything for your perfect event"
+            },
+            "quality": {
+                "title": "25+ Years of Excellence",
+                "caption": "Trusted by thousands of clients across Saudi Arabia"
             }
         },
         "buttons": {
-            "getStarted": "Get Started",
-            "learnMore": "Learn More"
+            "getStarted": "Get Quote",
+            "learnMore": "Our Services"
         }
     },
+    "WhoWeAreSection": {
+        "subtitle": "About Us",
+        "title": "Leading Tent Solutions in Riyadh",
+        "description": "With over 25 years of experience, we are the premier provider of high-quality tents and event solutions in Riyadh. Our commitment to excellence and customer satisfaction has made us the trusted choice for weddings, corporate events, and special occasions.",
+        "imageAlt": "Riyadh Tents Team",
+        "yearsBadge": "Years of Experience",
+        "features": {
+            "experience": {
+                "title": "Expert Team",
+                "description": "Professional installation crew"
+            },
+            "quality": {
+                "title": "Premium Quality",
+                "description": "Top-grade materials used"
+            },
+            "trust": {
+                "title": "Trusted Service",
+                "description": "Reliable & professional"
+            },
+            "delivery": {
+                "title": "On-Time Delivery",
+                "description": "Always punctual service"
+            }
+        }
+    },
+    "ServicesSection": {
+        "subtitle": "Our Services",
+        "title": "What We Offer",
+        "description": "Comprehensive tent and event solutions tailored to your needs",
+        "noServices": "No services available at the moment"
+    },
+    "TentsSection": {
+        "subtitle": "Our Collection",
+        "title": "Premium Tents",
+        "description": "Explore our wide range of high-quality tents for every occasion",
+        "noTents": "No tents available at the moment",
+        "maxWidth": "Width",
+        "maxHeight": "Height"
+    },
+    "ProjectsSection": {
+        "subtitle": "Our Work",
+        "title": "Recent Projects",
+        "description": "Browse through our latest tent installations and event setups",
+        "noProjects": "No projects available at the moment"
+    },
+    "CustomTentSection": {
+        "subtitle": "Custom Order",
+        "title": "Design Your Perfect Tent",
+        "description": "Choose your tent type and dimensions, and we'll prepare a custom quote for you",
+        "tentTypeLabel": "Tent Type",
+        "widthLabel": "Width",
+        "heightLabel": "Height",
+        "widthPlaceholder": "Enter width",
+        "heightPlaceholder": "Enter height",
+        "meters": "m",
+        "orderButton": "Order via WhatsApp",
+        "orderNote": "Our team will respond within 24 hours with a detailed quote"
+    },
+    "TestimonialsSection": {
+        "subtitle": "Testimonials",
+        "title": "What Our Clients Say",
+        "description": "Hear from our satisfied customers about their experience with us",
+        "noReviews": "No reviews available at the moment"
+    },
+    "ContactSection": {
+        "title": "Ready to Get Started?",
+        "description": "Contact us today for a free consultation and quote. We're here to make your event perfect!",
+        "whatsappButton": "Chat on WhatsApp",
+        "callButton": "Call Us Now",
+        "phoneTitle": "Phone",
+        "emailTitle": "Email",
+        "addressTitle": "Address",
+        "addressValue": "Riyadh, Saudi Arabia"
+    },
     "Footer": {
-        "copyright": "© 2025 My App. All rights reserved.",
+        "copyright": "© 2025 Riyadh Tents. All rights reserved.",
         "bottomLinks": {
             "privacy": "Privacy Policy",
             "terms": "Terms of Use"
@@ -97,10 +175,10 @@
     },
     "Auth": {
         "SignIn": {
-            "title": "Sign In - My App"
+            "title": "Sign In - Riyadh Tents"
         },
         "SignUp": {
-            "title": "Sign Up - My App"
+            "title": "Sign Up - Riyadh Tents"
         },
         "SignOut": {
             "button": "Sign Out"

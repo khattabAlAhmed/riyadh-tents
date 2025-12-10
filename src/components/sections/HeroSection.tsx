@@ -13,19 +13,25 @@ interface Slide {
     gradient: string;
 }
 
-// Example slides - customize these for your app
+// Tent-specific slides
 const slides: Slide[] = [
     {
         id: '1',
         key: 'welcome',
-        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80",
-        gradient: "from-blue-600/80 to-purple-600/80",
+        image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1920&q=80",
+        gradient: "from-primary/80 to-blue-900/80",
     },
     {
         id: '2',
-        key: 'features',
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80",
-        gradient: "from-purple-600/80 to-pink-600/80",
+        key: 'services',
+        image: "https://images.unsplash.com/photo-1478827536114-da961b7f86d2?w=1920&q=80",
+        gradient: "from-blue-900/80 to-primary/80",
+    },
+    {
+        id: '3',
+        key: 'quality',
+        image: "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?w=1920&q=80",
+        gradient: "from-primary/80 to-cyan-800/80",
     }
 ];
 
