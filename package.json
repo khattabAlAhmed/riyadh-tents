@@ -13,7 +13,8 @@
     "db:studio": "drizzle-kit studio",
     "db:seed": "tsx scripts/seed-example.ts",
     "db:seed:website": "tsx scripts/seed-website.ts",
-    "db:seed:tent-details": "tsx scripts/seed-tent-details.ts"
+    "db:seed:tent-details": "tsx scripts/seed-tent-details.ts",
+    "db:seed:descriptions": "tsx scripts/seed-new-description.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
