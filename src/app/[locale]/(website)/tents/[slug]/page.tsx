@@ -17,8 +17,20 @@ interface TentPageProps {
     }>;
 }
 
-// Force dynamic rendering for this page
-export const dynamic = 'force-dynamic';
+// Allow dynamic paths that weren't generated at build time
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+    const tents = await getTents();
+    const params: { slug: string }[] = [];
+
+    for (const tent of tents) {
+        params.push({ slug: tent.slugEn });
+        params.push({ slug: tent.slugAr });
+    }
+
+    return params;
+}
 
 export default async function TentPage({ params }: TentPageProps) {
     const { slug } = await params;

@@ -14,8 +14,20 @@ interface ServicePageProps {
     }>;
 }
 
-// Force dynamic rendering for this page
-export const dynamic = 'force-dynamic';
+// Allow dynamic paths that weren't generated at build time
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+    const services = await getServices();
+    const params: { slug: string }[] = [];
+
+    for (const service of services) {
+        params.push({ slug: service.slugEn });
+        params.push({ slug: service.slugAr });
+    }
+
+    return params;
+}
 
 export default async function ServicePage({ params }: ServicePageProps) {
     const { slug } = await params;
