@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp, real, json } from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp, real, json, integer } from "drizzle-orm/pg-core";
 
 // ============================================
 // Tent Types Table
@@ -30,11 +30,78 @@ export const tent = pgTable("tent", {
     keywordsEn: json("keywords_en").$type<string[]>().default([]).notNull(),
     tagsAr: json("tags_ar").$type<string[]>().default([]).notNull(),
     tagsEn: json("tags_en").$type<string[]>().default([]).notNull(),
-    maxWidth: real("max_width").notNull(), // max meters width
-    maxHeight: real("max_height").notNull(), // max meters height
     tentTypeId: text("tent_type_id")
         .notNull()
         .references(() => tentType.id, { onDelete: "cascade" }),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at")
+        .defaultNow()
+        .$onUpdate(() => /* @__PURE__ */ new Date())
+        .notNull(),
+});
+
+// ============================================
+// Tent Sizes Table
+// ============================================
+export const tentSize = pgTable("tent_size", {
+    id: text("id").primaryKey(),
+    tentId: text("tent_id")
+        .notNull()
+        .references(() => tent.id, { onDelete: "cascade" }),
+    typeCode: text("type_code").notNull(), // e.g., "EUR - T5", "EUR - P20"
+    wide: real("wide").notNull(), // Width in meters
+    eaveHeight: text("eave_height").notNull(), // May include range like "3.00m – 4.00m"
+    ridgeHeight: text("ridge_height").notNull(), // May include range
+    bayDistance: real("bay_distance"), // Bay distance in meters (nullable for dome tents)
+    diameter: real("diameter"), // For dome tents
+    centerHeight: real("center_height"), // For dome tents
+    area: real("area"), // Area in m²
+    capacityStand: integer("capacity_stand"), // Standing capacity
+    capacitySit: integer("capacity_sit"), // Sitting capacity
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at")
+        .defaultNow()
+        .$onUpdate(() => /* @__PURE__ */ new Date())
+        .notNull(),
+});
+
+// ============================================
+// Tent Specifications Table
+// ============================================
+export const tentSpecification = pgTable("tent_specification", {
+    id: text("id").primaryKey(),
+    tentId: text("tent_id")
+        .notNull()
+        .references(() => tent.id, { onDelete: "cascade" }),
+    profileMaterialEn: text("profile_material_en").notNull(),
+    profileMaterialAr: text("profile_material_ar").notNull(),
+    connectionEn: text("connection_en").notNull(),
+    connectionAr: text("connection_ar").notNull(),
+    roofCoverEn: text("roof_cover_en").notNull(),
+    roofCoverAr: text("roof_cover_ar").notNull(),
+    propertiesEn: text("properties_en").notNull(),
+    propertiesAr: text("properties_ar").notNull(),
+    wallTypeEn: text("wall_type_en").notNull(),
+    wallTypeAr: text("wall_type_ar").notNull(),
+    doorTypeEn: text("door_type_en").notNull(),
+    doorTypeAr: text("door_type_ar").notNull(),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at")
+        .defaultNow()
+        .$onUpdate(() => /* @__PURE__ */ new Date())
+        .notNull(),
+});
+
+// ============================================
+// Tent Accessories Table
+// ============================================
+export const tentAccessory = pgTable("tent_accessory", {
+    id: text("id").primaryKey(),
+    tentId: text("tent_id")
+        .notNull()
+        .references(() => tent.id, { onDelete: "cascade" }),
+    nameEn: text("name_en").notNull(),
+    nameAr: text("name_ar").notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at")
         .defaultNow()

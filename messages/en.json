@@ -79,6 +79,38 @@
         "maxWidth": "Width",
         "maxHeight": "Height"
     },
+    "TentPage": {
+        "backToTents": "Back to Tents",
+        "aboutTent": "About This Tent",
+        "gallery": "Gallery",
+        "sizesTitle": "Available Sizes",
+        "specificationsTitle": "Technical Specifications",
+        "accessoriesTitle": "Available Accessories",
+        "interestedInTent": "Interested in this tent?",
+        "contactUsDescription": "Contact us today for a free consultation and quote.",
+        "chatOnWhatsApp": "Chat on WhatsApp",
+        "callUs": "Call Us",
+        "sizeTable": {
+            "type": "Type",
+            "width": "Wide (m)",
+            "eaveHeight": "Eave Height",
+            "ridgeHeight": "Ridge Height",
+            "bayDistance": "Bay Distance (m)",
+            "diameter": "Diameter (m)",
+            "centerHeight": "Center Height (m)",
+            "area": "Area (m²)",
+            "capacityStand": "Capacity (Stand)",
+            "capacitySit": "Capacity (Sit)"
+        },
+        "specifications": {
+            "profileMaterial": "Profile Material",
+            "connection": "Connection",
+            "roofCover": "Roof Cover",
+            "properties": "Properties",
+            "wallType": "Wall Type",
+            "doorType": "Door Type"
+        }
+    },
     "ProjectsSection": {
         "subtitle": "Our Work",
         "title": "Recent Projects",

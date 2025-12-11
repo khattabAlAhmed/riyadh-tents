@@ -58,8 +58,6 @@ const tentsData = [
         keywordsEn: ["pyramid tents", "luxury tents", "events"],
         tagsAr: ["هرمي", "فاخر"],
         tagsEn: ["pyramid", "luxury"],
-        maxWidth: 20,
-        maxHeight: 8,
     },
     {
         nameAr: "الخيام المضلعة (البوليجون)",
@@ -73,8 +71,6 @@ const tentsData = [
         keywordsEn: ["polygon tents", "exhibitions", "events"],
         tagsAr: ["مضلع", "معارض"],
         tagsEn: ["polygon", "exhibitions"],
-        maxWidth: 30,
-        maxHeight: 10,
     },
     {
         nameAr: "خيام المخروط",
@@ -88,8 +84,6 @@ const tentsData = [
         keywordsEn: ["cone tents", "unique design"],
         tagsAr: ["مخروط", "فريد"],
         tagsEn: ["cone", "unique"],
-        maxWidth: 15,
-        maxHeight: 12,
     },
     {
         nameAr: "تجهيزات المعارض",
@@ -103,8 +97,6 @@ const tentsData = [
         keywordsEn: ["exhibitions", "equipment", "product display"],
         tagsAr: ["معارض", "احترافي"],
         tagsEn: ["exhibitions", "professional"],
-        maxWidth: 50,
-        maxHeight: 6,
     },
     {
         nameAr: "خيام نصف الدائرة (الدوم)",
@@ -118,8 +110,6 @@ const tentsData = [
         keywordsEn: ["dome tents", "modern", "pillarless"],
         tagsAr: ["قبة", "عصري"],
         tagsEn: ["dome", "modern"],
-        maxWidth: 25,
-        maxHeight: 15,
     },
     {
         nameAr: "الخيام المكعبة (قاعة البوكس)",
@@ -133,8 +123,6 @@ const tentsData = [
         keywordsEn: ["cube tents", "conferences", "meetings"],
         tagsAr: ["مكعب", "مؤتمرات"],
         tagsEn: ["cube", "conferences"],
-        maxWidth: 20,
-        maxHeight: 5,
     },
     {
         nameAr: "الخيام المقوسة",
@@ -148,8 +136,6 @@ const tentsData = [
         keywordsEn: ["arched tents", "elegant", "occasions"],
         tagsAr: ["مقوس", "أنيق"],
         tagsEn: ["arched", "elegant"],
-        maxWidth: 18,
-        maxHeight: 7,
     },
     {
         nameAr: "مظلات السيارات",
@@ -163,8 +149,6 @@ const tentsData = [
         keywordsEn: ["car shades", "protection", "modern"],
         tagsAr: ["مظلات", "سيارات"],
         tagsEn: ["shades", "cars"],
-        maxWidth: 6,
-        maxHeight: 3,
     },
 ];
 

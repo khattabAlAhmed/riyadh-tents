@@ -14,8 +14,8 @@ interface TentCardProps {
         descriptionEn: string;
         descriptionAr: string;
         imageUrls: string[];
-        maxWidth: number;
-        maxHeight: number;
+        maxWidth?: number;
+        maxHeight?: number;
         tentType?: {
             typeNameEn: string;
             typeNameAr: string;
@@ -83,18 +83,22 @@ export function TentCard({ tent, isLoading = false }: TentCardProps) {
                     {description}
                 </p>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                    <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                        </svg>
-                        {t('maxWidth')}: {tent.maxWidth}m
-                    </span>
-                    <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-                        </svg>
-                        {t('maxHeight')}: {tent.maxHeight}m
-                    </span>
+                    {tent.maxWidth !== undefined && tent.maxWidth > 0 && (
+                        <span className="flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                            </svg>
+                            {t('maxWidth')}: {tent.maxWidth}m
+                        </span>
+                    )}
+                    {tent.maxHeight !== undefined && tent.maxHeight > 0 && (
+                        <span className="flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                            </svg>
+                            {t('maxHeight')}: {tent.maxHeight}m
+                        </span>
+                    )}
                 </div>
                 <Link
                     href={`/tents/${slug}`}

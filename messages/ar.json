@@ -79,6 +79,38 @@
         "maxWidth": "العرض",
         "maxHeight": "الارتفاع"
     },
+    "TentPage": {
+        "backToTents": "العودة للخيام",
+        "aboutTent": "عن هذه الخيمة",
+        "gallery": "معرض الصور",
+        "sizesTitle": "المقاسات المتوفرة",
+        "specificationsTitle": "المواصفات الفنية",
+        "accessoriesTitle": "الإكسسوارات المتوفرة",
+        "interestedInTent": "مهتم بهذه الخيمة؟",
+        "contactUsDescription": "تواصل معنا اليوم للحصول على استشارة وعرض سعر مجاني.",
+        "chatOnWhatsApp": "تواصل عبر واتساب",
+        "callUs": "اتصل بنا",
+        "sizeTable": {
+            "type": "النوع",
+            "width": "العرض (م)",
+            "eaveHeight": "ارتفاع الحافة",
+            "ridgeHeight": "ارتفاع القمة",
+            "bayDistance": "مسافة البي (م)",
+            "diameter": "القطر (م)",
+            "centerHeight": "ارتفاع المركز (م)",
+            "area": "المساحة (م²)",
+            "capacityStand": "السعة (وقوف)",
+            "capacitySit": "السعة (جلوس)"
+        },
+        "specifications": {
+            "profileMaterial": "مادة الهيكل",
+            "connection": "الوصلات",
+            "roofCover": "غطاء السقف",
+            "properties": "الخصائص",
+            "wallType": "نوع الجدران",
+            "doorType": "نوع الأبواب"
+        }
+    },
     "ProjectsSection": {
         "subtitle": "أعمالنا",
         "title": "المشاريع الأخيرة",
