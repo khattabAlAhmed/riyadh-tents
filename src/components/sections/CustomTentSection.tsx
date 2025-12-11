@@ -180,8 +180,8 @@ const CustomTentSection = () => {
                                                     key={tent.id}
                                                     onClick={() => handleTentSelect(tent.id)}
                                                     className={`group relative aspect-square rounded-xl overflow-hidden border-2 transition-all duration-300 ${isSelected
-                                                            ? 'border-primary ring-2 ring-primary/30 scale-[1.02]'
-                                                            : 'border-border hover:border-primary/50 hover:scale-[1.02]'
+                                                        ? 'border-primary ring-2 ring-primary/30 scale-[1.02]'
+                                                        : 'border-border hover:border-primary/50 hover:scale-[1.02]'
                                                         }`}
                                                 >
                                                     <img
@@ -251,8 +251,8 @@ const CustomTentSection = () => {
                                                     key={size.id}
                                                     onClick={() => handleSizeSelect(size.id)}
                                                     className={`p-4 rounded-xl border-2 text-start transition-all ${isSelected
-                                                            ? 'border-primary bg-primary/5'
-                                                            : 'border-border hover:border-primary/50'
+                                                        ? 'border-primary bg-primary/5'
+                                                        : 'border-border hover:border-primary/50'
                                                         }`}
                                                 >
                                                     <div className="flex items-center justify-between mb-2">
@@ -278,8 +278,8 @@ const CustomTentSection = () => {
                                     <button
                                         onClick={handleCustomSizeToggle}
                                         className={`w-full p-4 rounded-xl border-2 text-start transition-all ${isCustomSize
-                                                ? 'border-primary bg-primary/5'
-                                                : 'border-dashed border-border hover:border-primary/50'
+                                            ? 'border-primary bg-primary/5'
+                                            : 'border-dashed border-border hover:border-primary/50'
                                             }`}
                                     >
                                         <div className="flex items-center justify-between">

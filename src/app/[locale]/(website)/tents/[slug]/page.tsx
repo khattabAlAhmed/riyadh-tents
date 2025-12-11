@@ -17,17 +17,8 @@ interface TentPageProps {
     }>;
 }
 
-export async function generateStaticParams() {
-    const tents = await getTents();
-    const params: { slug: string }[] = [];
-
-    for (const tent of tents) {
-        params.push({ slug: tent.slugEn });
-        params.push({ slug: tent.slugAr });
-    }
-
-    return params;
-}
+// Force dynamic rendering for this page
+export const dynamic = 'force-dynamic';
 
 export default async function TentPage({ params }: TentPageProps) {
     const { slug } = await params;
