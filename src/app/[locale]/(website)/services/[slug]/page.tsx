@@ -14,16 +14,25 @@ interface ServicePageProps {
     }>;
 }
 
+// Allow dynamic paths that weren't generated at build time
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-    const services = await getServices();
-    const params: { slug: string }[] = [];
+    try {
+        const services = await getServices();
+        const params: { slug: string }[] = [];
 
-    for (const service of services) {
-        params.push({ slug: service.slugEn });
-        params.push({ slug: service.slugAr });
+        for (const service of services) {
+            params.push({ slug: service.slugEn });
+            params.push({ slug: service.slugAr });
+        }
+
+        return params;
+    } catch (error) {
+        // Return empty array if database is not accessible during build
+        console.error('Failed to generate static params for services:', error);
+        return [];
     }
-
-    return params;
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {

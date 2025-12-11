@@ -17,16 +17,25 @@ interface TentPageProps {
     }>;
 }
 
+// Allow dynamic paths that weren't generated at build time
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-    const tents = await getTents();
-    const params: { slug: string }[] = [];
+    try {
+        const tents = await getTents();
+        const params: { slug: string }[] = [];
 
-    for (const tent of tents) {
-        params.push({ slug: tent.slugEn });
-        params.push({ slug: tent.slugAr });
+        for (const tent of tents) {
+            params.push({ slug: tent.slugEn });
+            params.push({ slug: tent.slugAr });
+        }
+
+        return params;
+    } catch (error) {
+        // Return empty array if database is not accessible during build
+        console.error('Failed to generate static params for tents:', error);
+        return [];
     }
-
-    return params;
 }
 
 export default async function TentPage({ params }: TentPageProps) {
