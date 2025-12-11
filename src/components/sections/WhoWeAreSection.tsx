@@ -32,7 +32,7 @@ const WhoWeAreSection = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Content Side */}
                     <div className={locale === 'ar' ? 'lg:order-2' : ''}>
-                        <span className="inline-block text-primary font-semibold mb-4 text-sm uppercase tracking-wider">
+                        <span className="inline-block text-primary font-semibold mb-4 text-xl uppercase tracking-wider">
                             {t('subtitle')}
                         </span>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">

@@ -46,7 +46,8 @@ const Header = () => {
                         {/* Logo */}
                         <Link href="/" className="flex-shrink-0 items-center">
                             <div className="w-auto">
-                                <h1 className="text-lg font-bold text-[#0b8eca]">{t('title')}</h1>
+                                {/* <h1 className="text-lg font-bold text-[#0b8eca]">{t('title')}</h1> */}
+                                <Image alt='logo' src={locale === 'ar' ? '/logo.png' : '/logo_english.png'} height={56.1} width={134.5} />
                             </div>
                         </Link>
 
@@ -58,7 +59,9 @@ const Header = () => {
                         {/* Logo */}
                         <Link href="/" className="flex-shrink-0">
                             <div className="w-auto">
-                                <h1 className="text-xl font-bold text-[#0b8eca]">{t('title')}</h1>
+                                {/* <h1 className="text-xl font-bold text-[#0b8eca]">{t('title')}</h1> */}
+                                <Image alt='logo' src={locale === 'ar' ? '/logo.png' : '/logo_english.png'} height={56.1} width={134.5} />
+
                             </div>
                         </Link>
 
