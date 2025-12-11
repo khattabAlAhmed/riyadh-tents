@@ -17,7 +17,8 @@ interface TentPageProps {
     }>;
 }
 
-// Allow dynamic paths that weren't generated at build time
+// Force dynamic rendering (required because getLocale uses cookies/headers)
+export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
