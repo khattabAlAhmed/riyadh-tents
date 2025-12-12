@@ -241,6 +241,180 @@
             "button": "Sign Out"
         }
     },
+    "AboutPage": {
+        "seo": {
+            "title": "About Us - Riyadh Tents",
+            "description": "Learn about Riyadh Tents - Over 25 years of excellence in premium tent solutions and event services in Saudi Arabia."
+        },
+        "hero": {
+            "subtitle": "About Us",
+            "title": "Your Trusted Partner in Premium Tent Solutions",
+            "description": "Since 1999, we've been transforming events across Saudi Arabia with world-class tent installations."
+        },
+        "story": {
+            "subtitle": "Our Story",
+            "title": "A Legacy of Excellence",
+            "paragraph1": "Riyadh Tents was founded in 1999 with a simple vision: to provide Saudi Arabia with the finest quality tents and event solutions. What started as a small family business has grown into one of the kingdom's most trusted names in premium tent installations.",
+            "paragraph2": "Over the past 25 years, we've had the privilege of serving thousands of clients, from intimate family gatherings to grand royal events. Our commitment to quality, craftsmanship, and customer satisfaction has remained unwavering throughout our journey.",
+            "paragraph3": "Today, we continue to innovate and expand our offerings, bringing the latest European tent technologies to the Middle East while preserving the traditional Arabian hospitality that defines our service."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "description": "To deliver exceptional tent solutions that exceed expectations, creating memorable spaces where dreams come to life and celebrations become unforgettable experiences."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "description": "To be the leading provider of premium tent solutions across the Middle East, setting the standard for quality, innovation, and customer service in the event industry."
+        },
+        "values": {
+            "title": "Our Values",
+            "items": {
+                "quality": {
+                    "title": "Quality Excellence",
+                    "description": "We use only the finest materials and maintain rigorous quality standards."
+                },
+                "integrity": {
+                    "title": "Integrity",
+                    "description": "Honest, transparent dealings with every client, every time."
+                },
+                "innovation": {
+                    "title": "Innovation",
+                    "description": "Continuously improving and adapting to meet evolving needs."
+                },
+                "service": {
+                    "title": "Customer First",
+                    "description": "Your satisfaction is our ultimate measure of success."
+                }
+            }
+        },
+        "stats": {
+            "years": "Years of Experience",
+            "clients": "Happy Clients",
+            "projects": "Projects Completed",
+            "team": "Expert Team Members"
+        },
+        "whyChooseUs": {
+            "subtitle": "Why Choose Us",
+            "title": "What Sets Us Apart",
+            "items": {
+                "experience": {
+                    "title": "25+ Years Experience",
+                    "description": "Decades of expertise in tent installations and event solutions."
+                },
+                "quality": {
+                    "title": "Premium Materials",
+                    "description": "We source only the highest quality European tent systems."
+                },
+                "team": {
+                    "title": "Expert Installation",
+                    "description": "Professional teams ensuring perfect setup every time."
+                },
+                "support": {
+                    "title": "24/7 Support",
+                    "description": "Round-the-clock assistance for all your event needs."
+                },
+                "custom": {
+                    "title": "Custom Solutions",
+                    "description": "Tailored designs to match your unique requirements."
+                },
+                "coverage": {
+                    "title": "Nationwide Coverage",
+                    "description": "Serving clients across all regions of Saudi Arabia."
+                }
+            }
+        },
+        "cta": {
+            "title": "Ready to Start Your Project?",
+            "description": "Contact our team today and let's bring your vision to life.",
+            "whatsappButton": "Chat on WhatsApp",
+            "callButton": "Call Us Now"
+        }
+    },
+    "ContactPage": {
+        "seo": {
+            "title": "Contact Us - Riyadh Tents",
+            "description": "Get in touch with Riyadh Tents. We're here to help with all your tent and event needs. Call, WhatsApp, or visit us today."
+        },
+        "hero": {
+            "subtitle": "Contact Us",
+            "title": "Get in Touch",
+            "description": "Have questions or ready to start your project? We're here to help you create unforgettable events."
+        },
+        "info": {
+            "title": "Contact Information",
+            "description": "Reach out to us through any of these channels",
+            "phone": {
+                "title": "Phone",
+                "value": "+966 55 224 8896",
+                "description": "Call us for immediate assistance"
+            },
+            "whatsapp": {
+                "title": "WhatsApp",
+                "value": "+966 55 224 8896",
+                "description": "Message us anytime"
+            },
+            "email": {
+                "title": "Email",
+                "value": "info@riyadh-tents.com",
+                "description": "Send us your inquiries"
+            },
+            "address": {
+                "title": "Address",
+                "value": "Riyadh, Saudi Arabia",
+                "description": "Visit our showroom"
+            },
+            "hours": {
+                "title": "Working Hours",
+                "value": "Sat - Thu: 8AM - 6PM",
+                "description": "We're here when you need us"
+            }
+        },
+        "form": {
+            "title": "Send Us a Message",
+            "description": "Fill out the form below and we'll get back to you within 24 hours",
+            "name": "Full Name",
+            "namePlaceholder": "Enter your full name",
+            "email": "Email Address",
+            "emailPlaceholder": "Enter your email",
+            "phone": "Phone Number",
+            "phonePlaceholder": "Enter your phone number",
+            "subject": "Subject",
+            "subjectPlaceholder": "What is this about?",
+            "message": "Message",
+            "messagePlaceholder": "Tell us about your project or inquiry...",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully! We'll get back to you soon.",
+            "error": "Failed to send message. Please try again or contact us directly."
+        },
+        "quickContact": {
+            "title": "Prefer a Quick Response?",
+            "description": "Contact us directly via WhatsApp or phone for immediate assistance.",
+            "whatsappButton": "Chat on WhatsApp",
+            "callButton": "Call Us Now"
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": {
+                "q1": {
+                    "question": "What areas do you serve?",
+                    "answer": "We serve all regions across Saudi Arabia, with our main operations based in Riyadh. We can deliver and install tents anywhere in the Kingdom."
+                },
+                "q2": {
+                    "question": "How far in advance should I book?",
+                    "answer": "We recommend booking at least 2-4 weeks in advance for regular events, and 1-2 months for large-scale events or during peak seasons."
+                },
+                "q3": {
+                    "question": "Do you offer rental or purchase options?",
+                    "answer": "Yes, we offer both rental and purchase options. Our team will help you choose the best option based on your needs and budget."
+                },
+                "q4": {
+                    "question": "What's included in your service?",
+                    "answer": "Our service includes delivery, professional installation, and removal. We also offer additional services like decoration, lighting, and air conditioning."
+                }
+            }
+        }
+    },
     "dashboard": {
         "sidebar": {
             "title": "Dashboard",

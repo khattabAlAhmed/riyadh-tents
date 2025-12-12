@@ -20,6 +20,6 @@ export const auth = betterAuth({
   }),
   plugins: [nextCookies()],
   baseURL: process.env.NODE_ENV === "production"
-    ? "https://tulaab.online"
+    ? "https://riyadh-tents.com"
     : "http://localhost:3000"
 });

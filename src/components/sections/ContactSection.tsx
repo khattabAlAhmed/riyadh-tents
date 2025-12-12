@@ -71,7 +71,7 @@ const ContactSection = () => {
                                 <Mail className="w-6 h-6 text-white" />
                             </div>
                             <h3 className="text-white font-semibold mb-2">{t('emailTitle')}</h3>
-                            <p className="text-white/80 text-sm">info@riyadhtents.com</p>
+                            <p className="text-white/80 text-sm">info@riyadh-tents.com</p>
                         </div>
                         <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
                             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-4">
