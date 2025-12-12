@@ -8,8 +8,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 
 type Props = {
@@ -48,6 +48,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           </NextIntlClientProvider>
         </ThemeProvider>
         <Toaster />
+        <SpeedInsights />
         <Analytics />
 
       </body>
