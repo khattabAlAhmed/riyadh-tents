@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { db } from '@/lib/db';
+import { db } from '@/lib/db/drizzle';
 import { tent, service, project } from '@/lib/db/schema/website-schema';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://riyadh-tents.com';
