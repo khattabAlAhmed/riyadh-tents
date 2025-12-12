@@ -30,8 +30,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: page === '' ? 1.0 : 0.8,
                 alternates: {
                     languages: {
-                        en: `${BASE_URL}/en${page}`,
                         ar: `${BASE_URL}/ar${page}`,
+                        en: `${BASE_URL}/en${page}`,
                     },
                 },
             });
@@ -42,8 +42,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     try {
         // Fetch all tents
         const tents = await db.select({
-            slugEn: tent.slugEn,
             slugAr: tent.slugAr,
+            slugEn: tent.slugEn,
             updatedAt: tent.updatedAt,
         }).from(tent);
 
@@ -57,8 +57,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 0.7,
                 alternates: {
                     languages: {
-                        en: `${BASE_URL}/en/tents/${t.slugEn}`,
                         ar: `${BASE_URL}/ar/tents/${t.slugAr}`,
+                        en: `${BASE_URL}/en/tents/${t.slugEn}`,
                     },
                 },
             });
@@ -71,8 +71,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 0.7,
                 alternates: {
                     languages: {
-                        en: `${BASE_URL}/en/tents/${t.slugEn}`,
                         ar: `${BASE_URL}/ar/tents/${t.slugAr}`,
+                        en: `${BASE_URL}/en/tents/${t.slugEn}`,
                     },
                 },
             });
@@ -80,8 +80,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         // Fetch all services
         const services = await db.select({
-            slugEn: service.slugEn,
             slugAr: service.slugAr,
+            slugEn: service.slugEn,
             updatedAt: service.updatedAt,
         }).from(service);
 
@@ -95,8 +95,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 0.7,
                 alternates: {
                     languages: {
-                        en: `${BASE_URL}/en/services/${s.slugEn}`,
                         ar: `${BASE_URL}/ar/services/${s.slugAr}`,
+                        en: `${BASE_URL}/en/services/${s.slugEn}`,
                     },
                 },
             });
@@ -109,50 +109,50 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 0.7,
                 alternates: {
                     languages: {
-                        en: `${BASE_URL}/en/services/${s.slugEn}`,
                         ar: `${BASE_URL}/ar/services/${s.slugAr}`,
+                        en: `${BASE_URL}/en/services/${s.slugEn}`,
                     },
                 },
             });
         }
 
         // Fetch all projects (if project pages exist)
-        const projects = await db.select({
-            slugEn: project.slugEn,
-            slugAr: project.slugAr,
-            updatedAt: project.updatedAt,
-        }).from(project);
+        // const projects = await db.select({
+        //     slugAr: project.slugAr,
+        //     slugEn: project.slugEn,
+        //     updatedAt: project.updatedAt,
+        // }).from(project);
 
         // Add project pages for both locales
-        for (const p of projects) {
-            // English project page
-            sitemapEntries.push({
-                url: `${BASE_URL}/en/projects/${p.slugEn}`,
-                lastModified: p.updatedAt,
-                changeFrequency: 'monthly',
-                priority: 0.6,
-                alternates: {
-                    languages: {
-                        en: `${BASE_URL}/en/projects/${p.slugEn}`,
-                        ar: `${BASE_URL}/ar/projects/${p.slugAr}`,
-                    },
-                },
-            });
+        // for (const p of projects) {
+        //     // English project page
+        //     sitemapEntries.push({
+        //         url: `${BASE_URL}/en/projects/${p.slugEn}`,
+        //         lastModified: p.updatedAt,
+        //         changeFrequency: 'monthly',
+        //         priority: 0.6,
+        //         alternates: {
+        //             languages: {
+        //                 ar: `${BASE_URL}/ar/projects/${p.slugAr}`,
+        //                 en: `${BASE_URL}/en/projects/${p.slugEn}`,
+        //             },
+        //         },
+        //     });
 
-            // Arabic project page
-            sitemapEntries.push({
-                url: `${BASE_URL}/ar/projects/${p.slugAr}`,
-                lastModified: p.updatedAt,
-                changeFrequency: 'monthly',
-                priority: 0.6,
-                alternates: {
-                    languages: {
-                        en: `${BASE_URL}/en/projects/${p.slugEn}`,
-                        ar: `${BASE_URL}/ar/projects/${p.slugAr}`,
-                    },
-                },
-            });
-        }
+        //     // Arabic project page
+        //     sitemapEntries.push({
+        //         url: `${BASE_URL}/ar/projects/${p.slugAr}`,
+        //         lastModified: p.updatedAt,
+        //         changeFrequency: 'monthly',
+        //         priority: 0.6,
+        //         alternates: {
+        //             languages: {
+        //                 ar: `${BASE_URL}/ar/projects/${p.slugAr}`,
+        //                 en: `${BASE_URL}/en/projects/${p.slugEn}`,
+        //             },
+        //         },
+        //     });
+        // }
 
     } catch (error) {
         console.error('Error fetching dynamic sitemap data:', error);
