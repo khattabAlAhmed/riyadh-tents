@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import CookieConsent from "@/components/CookieConsent";
 import React from "react";
 
 type Props = {
@@ -26,6 +28,8 @@ export default function WebsiteLayout({
             <Header />
             {children}
             <Footer />
+            <ScrollToTop />
+            <CookieConsent />
         </>
     );
 }

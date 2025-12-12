@@ -60,7 +60,7 @@ const Footer = () => {
                     {/* Quick Links */}
                     <div className="text-center md:text-start">
                         <h3 className="text-lg font-bold mb-4 pb-2 border-b border-white/20">
-                            Quick Links
+                            {t('quickLinks')}
                         </h3>
                         <ul className="space-y-2">
                             {sitemapLinks.map((link, index) => (
@@ -79,7 +79,7 @@ const Footer = () => {
                     {/* Legal */}
                     <div className="text-center md:text-start">
                         <h3 className="text-lg font-bold mb-4 pb-2 border-b border-white/20">
-                            Legal
+                            {t('legal')}
                         </h3>
                         <ul className="space-y-2">
                             <li>
@@ -96,6 +96,14 @@ const Footer = () => {
                                     className="text-sm hover:underline hover:translate-x-1 rtl:hover:-translate-x-1 inline-block transition-transform duration-200"
                                 >
                                     {t('bottomLinks.terms')}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/cookies"
+                                    className="text-sm hover:underline hover:translate-x-1 rtl:hover:-translate-x-1 inline-block transition-transform duration-200"
+                                >
+                                    {t('bottomLinks.cookies')}
                                 </Link>
                             </li>
                         </ul>

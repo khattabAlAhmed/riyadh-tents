@@ -19,7 +19,7 @@
                 "caption": "From installation to decoration, we handle everything for your perfect event"
             },
             "quality": {
-                "title": "25+ Years of Excellence",
+                "title": "5+ Years of Excellence",
                 "caption": "Trusted by thousands of clients across Saudi Arabia"
             }
         },
@@ -34,7 +34,7 @@
     "WhoWeAreSection": {
         "subtitle": "About Us",
         "title": "Leading Tent Solutions in Riyadh",
-        "description": "With over 25 years of experience, we are the premier provider of high-quality tents and event solutions in Riyadh. Our commitment to excellence and customer satisfaction has made us the trusted choice for weddings, corporate events, and special occasions.",
+        "description": "With over 5 years of experience, we are the premier provider of high-quality tents and event solutions in Riyadh. Our commitment to excellence and customer satisfaction has made us the trusted choice for weddings, corporate events, and special occasions.",
         "imageAlt": "Riyadh Tents Team",
         "yearsBadge": "Years of Experience",
         "features": {
@@ -156,9 +156,12 @@
     },
     "Footer": {
         "copyright": "© 2025 Riyadh Tents. All rights reserved.",
+        "quickLinks": "Quick Links",
+        "legal": "Legal",
         "bottomLinks": {
             "privacy": "Privacy Policy",
-            "terms": "Terms of Use"
+            "terms": "Terms of Use",
+            "cookies": "Cookie Policy"
         }
     },
     "LanguageSwitch": {
@@ -244,7 +247,7 @@
     "AboutPage": {
         "seo": {
             "title": "About Us - Riyadh Tents",
-            "description": "Learn about Riyadh Tents - Over 25 years of excellence in premium tent solutions and event services in Saudi Arabia."
+            "description": "Learn about Riyadh Tents - Over 5 years of excellence in premium tent solutions and event services in Saudi Arabia."
         },
         "hero": {
             "subtitle": "About Us",
@@ -255,7 +258,7 @@
             "subtitle": "Our Story",
             "title": "A Legacy of Excellence",
             "paragraph1": "Riyadh Tents was founded in 1999 with a simple vision: to provide Saudi Arabia with the finest quality tents and event solutions. What started as a small family business has grown into one of the kingdom's most trusted names in premium tent installations.",
-            "paragraph2": "Over the past 25 years, we've had the privilege of serving thousands of clients, from intimate family gatherings to grand royal events. Our commitment to quality, craftsmanship, and customer satisfaction has remained unwavering throughout our journey.",
+            "paragraph2": "Over the past 5 years, we've had the privilege of serving thousands of clients, from intimate family gatherings to grand royal events. Our commitment to quality, craftsmanship, and customer satisfaction has remained unwavering throughout our journey.",
             "paragraph3": "Today, we continue to innovate and expand our offerings, bringing the latest European tent technologies to the Middle East while preserving the traditional Arabian hospitality that defines our service."
         },
         "mission": {
@@ -365,7 +368,7 @@
             },
             "hours": {
                 "title": "Working Hours",
-                "value": "Sat - Thu: 8AM - 6PM",
+                "value": "Sat - Thu: 8AM - 12PM",
                 "description": "We're here when you need us"
             }
         },
@@ -414,6 +417,155 @@
                 }
             }
         }
+    },
+    "PrivacyPage": {
+        "seo": {
+            "title": "Privacy Policy - Riyadh Tents",
+            "description": "Learn how Riyadh Tents collects, uses, and protects your personal information."
+        },
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated: December 2025",
+        "sections": {
+            "intro": {
+                "title": "Introduction",
+                "content": "At Riyadh Tents, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services."
+            },
+            "collection": {
+                "title": "Information We Collect",
+                "content": "We may collect personal information that you voluntarily provide to us when you:",
+                "items": [
+                    "Fill out contact forms or request quotes",
+                    "Subscribe to our newsletter",
+                    "Communicate with us via phone, email, or WhatsApp",
+                    "Use our services"
+                ]
+            },
+            "usage": {
+                "title": "How We Use Your Information",
+                "content": "We use the information we collect to:",
+                "items": [
+                    "Respond to your inquiries and provide customer service",
+                    "Process your orders and service requests",
+                    "Send you marketing communications (with your consent)",
+                    "Improve our website and services",
+                    "Comply with legal obligations"
+                ]
+            },
+            "sharing": {
+                "title": "Information Sharing",
+                "content": "We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted service providers who assist us in operating our business, provided they agree to keep your information confidential."
+            },
+            "security": {
+                "title": "Data Security",
+                "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+            },
+            "rights": {
+                "title": "Your Rights",
+                "content": "You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us using the information provided below."
+            },
+            "contact": {
+                "title": "Contact Us",
+                "content": "If you have any questions about this Privacy Policy, please contact us at:",
+                "email": "Email: info@riyadh-tents.com",
+                "phone": "Phone: +966 55 224 8896"
+            }
+        }
+    },
+    "TermsPage": {
+        "seo": {
+            "title": "Terms of Use - Riyadh Tents",
+            "description": "Read the terms and conditions governing the use of Riyadh Tents services."
+        },
+        "title": "Terms of Use",
+        "lastUpdated": "Last updated: December 2024",
+        "sections": {
+            "intro": {
+                "title": "Introduction",
+                "content": "Welcome to Riyadh Tents. By accessing our website and using our services, you agree to be bound by these Terms of Use. Please read them carefully before using our services."
+            },
+            "services": {
+                "title": "Our Services",
+                "content": "Riyadh Tents provides tent rental, sales, and installation services for events, weddings, exhibitions, and other occasions. All services are subject to availability and our standard terms."
+            },
+            "booking": {
+                "title": "Booking and Payment",
+                "content": "All bookings require confirmation and may require a deposit. Payment terms will be specified at the time of booking. Cancellation policies vary based on the type of service and timing."
+            },
+            "liability": {
+                "title": "Limitation of Liability",
+                "content": "While we strive to provide the best service, Riyadh Tents shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services, except where prohibited by law."
+            },
+            "intellectual": {
+                "title": "Intellectual Property",
+                "content": "All content on this website, including text, images, logos, and designs, is the property of Riyadh Tents and is protected by copyright and trademark laws."
+            },
+            "changes": {
+                "title": "Changes to Terms",
+                "content": "We reserve the right to modify these Terms of Use at any time. Changes will be effective immediately upon posting on our website."
+            },
+            "governing": {
+                "title": "Governing Law",
+                "content": "These Terms of Use shall be governed by and construed in accordance with the laws of the Kingdom of Saudi Arabia."
+            },
+            "contact": {
+                "title": "Contact Us",
+                "content": "If you have any questions about these Terms of Use, please contact us at:",
+                "email": "Email: info@riyadh-tents.com",
+                "phone": "Phone: +966 55 224 8896"
+            }
+        }
+    },
+    "CookiesPage": {
+        "seo": {
+            "title": "Cookie Policy - Riyadh Tents",
+            "description": "Learn about how Riyadh Tents uses cookies and similar technologies on our website."
+        },
+        "title": "Cookie Policy",
+        "lastUpdated": "Last updated: December 2024",
+        "sections": {
+            "intro": {
+                "title": "What Are Cookies",
+                "content": "Cookies are small text files that are stored on your device when you visit a website. They help websites remember your preferences and improve your browsing experience."
+            },
+            "types": {
+                "title": "Types of Cookies We Use",
+                "essential": {
+                    "title": "Essential Cookies",
+                    "content": "These cookies are necessary for the website to function properly. They enable basic functions like page navigation and access to secure areas."
+                },
+                "analytics": {
+                    "title": "Analytics Cookies",
+                    "content": "These cookies help us understand how visitors interact with our website by collecting information anonymously."
+                },
+                "functional": {
+                    "title": "Functional Cookies",
+                    "content": "These cookies remember your preferences, such as language and region, to provide a more personalized experience."
+                }
+            },
+            "manage": {
+                "title": "Managing Cookies",
+                "content": "You can control and manage cookies through your browser settings. Please note that disabling certain cookies may affect the functionality of our website."
+            },
+            "updates": {
+                "title": "Updates to This Policy",
+                "content": "We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date."
+            },
+            "contact": {
+                "title": "Contact Us",
+                "content": "If you have any questions about our use of cookies, please contact us at:",
+                "email": "Email: info@riyadh-tents.com",
+                "phone": "Phone: +966 55 224 8896"
+            }
+        }
+    },
+    "CookieConsent": {
+        "message": "We use cookies to enhance your browsing experience and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+        "acceptAll": "Accept All",
+        "acceptEssential": "Essential Only",
+        "learnMore": "Learn More"
+    },
+    "ScrollToTop": {
+        "label": "Scroll to top"
     },
     "dashboard": {
         "sidebar": {
