@@ -15,7 +15,7 @@ const staticPages = [
 ];
 
 // Locales supported by the app
-const locales = ['en', 'ar'];
+const locales = ['ar', 'en'];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const sitemapEntries: MetadataRoute.Sitemap = [];
