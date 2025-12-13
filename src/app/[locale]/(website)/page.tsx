@@ -28,6 +28,7 @@ export async function generateMetadata({
       type: 'website',
       locale: locale,
       siteName: locale === 'ar' ? 'خيام الرياض' : 'Riyadh Tents',
+      url: `https://www.riyadh-tents.com/${locale}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -35,9 +36,10 @@ export async function generateMetadata({
       description: t('description'),
     },
     alternates: {
+      canonical: `https://www.riyadh-tents.com/${locale}`,
       languages: {
-        'en': '/en',
-        'ar': '/ar',
+        'en': 'https://www.riyadh-tents.com/en',
+        'ar': 'https://www.riyadh-tents.com/ar',
       },
     },
   };

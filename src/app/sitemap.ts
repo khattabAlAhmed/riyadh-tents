@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { db } from '@/lib/db/drizzle';
 import { tent, service, project } from '@/lib/db/schema/website-schema';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://riyadh-tents.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.riyadh-tents.com';
 
 // Static pages that don't require database queries
 const staticPages = [

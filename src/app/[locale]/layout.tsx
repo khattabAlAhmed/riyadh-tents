@@ -9,8 +9,12 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Metadata } from "next";
 
-
+// This tells Google and other crawlers to always use HTTPS + www
+export const metadata: Metadata = {
+  metadataBase: new URL('https://www.riyadh-tents.com'),
+};
 
 type Props = {
   children: React.ReactNode;
