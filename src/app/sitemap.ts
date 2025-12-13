@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { db } from '@/lib/db/drizzle';
 import { tent, service, project } from '@/lib/db/schema/website-schema';
+import { blogPost } from '@/lib/db/schema/blog-schema';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.riyadh-tents.com';
 
@@ -12,6 +13,7 @@ const staticPages = [
     '/privacy',
     '/terms',
     '/cookies',
+    '/blog',
 ];
 
 // Locales supported by the app
@@ -111,6 +113,44 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                     languages: {
                         ar: `${BASE_URL}/ar/services/${s.slugAr}`,
                         en: `${BASE_URL}/en/services/${s.slugEn}`,
+                    },
+                },
+            });
+        }
+
+        // Fetch all blog posts
+        const posts = await db.select({
+            slugAr: blogPost.slugAr,
+            slugEn: blogPost.slugEn,
+            updatedAt: blogPost.updatedAt,
+        }).from(blogPost);
+
+        // Add blog post pages for both locales
+        for (const p of posts) {
+            // English blog post page
+            sitemapEntries.push({
+                url: `${BASE_URL}/en/blog/${p.slugEn}`,
+                lastModified: p.updatedAt,
+                changeFrequency: 'weekly',
+                priority: 0.7,
+                alternates: {
+                    languages: {
+                        ar: `${BASE_URL}/ar/blog/${p.slugAr}`,
+                        en: `${BASE_URL}/en/blog/${p.slugEn}`,
+                    },
+                },
+            });
+
+            // Arabic blog post page
+            sitemapEntries.push({
+                url: `${BASE_URL}/ar/blog/${p.slugAr}`,
+                lastModified: p.updatedAt,
+                changeFrequency: 'weekly',
+                priority: 0.7,
+                alternates: {
+                    languages: {
+                        ar: `${BASE_URL}/ar/blog/${p.slugAr}`,
+                        en: `${BASE_URL}/en/blog/${p.slugEn}`,
                     },
                 },
             });
