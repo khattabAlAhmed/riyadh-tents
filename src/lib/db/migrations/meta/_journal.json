@@ -29,6 +29,13 @@
       "when": 1765477989827,
       "tag": "0003_fixed_bushwacker",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1765665994536,
+      "tag": "0004_freezing_black_knight",
+      "breakpoints": true
     }
   ]
 }

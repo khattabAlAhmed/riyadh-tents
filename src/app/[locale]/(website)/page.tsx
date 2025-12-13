@@ -7,6 +7,7 @@ import TentsSection from "@/components/sections/TentsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import CustomTentSection from "@/components/sections/CustomTentSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import BlogSection from "@/components/sections/BlogSection";
 import ContactSection from "@/components/sections/ContactSection";
 
 export async function generateMetadata({
@@ -53,6 +54,7 @@ export default function Home() {
         <ProjectsSection />
         <CustomTentSection />
         <TestimonialsSection />
+        <BlogSection />
         <ContactSection />
       </main>
     </div>

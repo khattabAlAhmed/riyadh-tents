@@ -86,6 +86,12 @@
   --service-card-text: oklch(0.2 0 0);
   --service-card-muted: oklch(0.45 0 0);
   --service-link: #1e418c;
+
+  /* Blog Section */
+  --blog-section-bg: oklch(1 0 0);
+  --blog-card-bg: oklch(0.98 0 0);
+  --blog-card-border: oklch(0.9 0 0);
+  --blog-date-color: oklch(0.5 0 0);
 }
 
 .dark {
@@ -131,6 +137,12 @@
   --service-card-text: oklch(0.95 0 0);
   --service-card-muted: oklch(0.65 0 0);
   --service-link: #0dcfcf;
+
+  /* Blog Section */
+  --blog-section-bg: oklch(0.145 0 0);
+  --blog-card-bg: oklch(0.18 0.015 240);
+  --blog-card-border: oklch(0.25 0.01 240);
+  --blog-date-color: oklch(0.6 0 0);
 }
 
 @layer base {
@@ -141,4 +153,86 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Blog Rich Text Content Styling */
+.blog-content {
+  line-height: 1.8;
+}
+
+.blog-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.blog-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+}
+
+.blog-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.blog-content p {
+  margin-bottom: 1rem;
+  color: var(--muted-foreground);
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1rem;
+  padding-inline-start: 1.5rem;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+  color: var(--muted-foreground);
+}
+
+.blog-content strong {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.blog-content a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.blog-content a:hover {
+  opacity: 0.8;
+}
+
+.blog-content blockquote {
+  border-inline-start: 4px solid var(--primary);
+  padding-inline-start: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--muted-foreground);
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
 }

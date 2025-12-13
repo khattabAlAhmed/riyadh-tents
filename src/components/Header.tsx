@@ -4,19 +4,34 @@ import { useLocale, useTranslations } from 'next-intl';
 import LanguageSwitch from './LanguageSwitch'
 import ModeToggler from './mode-toggler'
 import Link from 'next/link';
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, Search } from 'lucide-react';
 import Image from 'next/image';
+import { SearchModal } from './SearchModal';
 
 const Header = () => {
     const t = useTranslations('HomePage');
     const navItems = useTranslations('navItems');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const locale = useLocale();
+
+    // Cmd+K / Ctrl+K keyboard shortcut
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                setIsSearchOpen(true);
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
 
     const navItemsList = [
         { label: navItems('home'), href: '/' },
         { label: navItems('about'), href: '/about' },
+        { label: navItems('blog'), href: '/blog' },
         { label: navItems('contact'), href: '/contact' },
     ];
 
@@ -46,12 +61,21 @@ const Header = () => {
                         {/* Logo */}
                         <Link href="/" className="flex-shrink-0 items-center">
                             <div className="w-auto">
-                                {/* <h1 className="text-lg font-bold text-[#0b8eca]">{t('title')}</h1> */}
                                 <Image alt='logo' src={locale === 'ar' ? '/logo.png' : '/logo_english.png'} height={56.1} width={134.5} />
                             </div>
                         </Link>
 
-                        <ModeToggler />
+                        {/* Search & Mode */}
+                        <div className="flex items-center gap-2">
+                            <button
+                                onClick={() => setIsSearchOpen(true)}
+                                className="p-2 hover:bg-accent rounded-md transition-colors"
+                                aria-label="Search"
+                            >
+                                <Search className="w-5 h-5" />
+                            </button>
+                            <ModeToggler />
+                        </div>
                     </div>
 
                     {/* Desktop Header */}
@@ -59,9 +83,7 @@ const Header = () => {
                         {/* Logo */}
                         <Link href="/" className="flex-shrink-0">
                             <div className="w-auto">
-                                {/* <h1 className="text-xl font-bold text-[#0b8eca]">{t('title')}</h1> */}
                                 <Image alt='logo' src={locale === 'ar' ? '/logo.png' : '/logo_english.png'} height={56.1} width={134.5} />
-
                             </div>
                         </Link>
 
@@ -78,7 +100,17 @@ const Header = () => {
                             ))}
                         </nav>
 
-                        <ModeToggler />
+                        {/* Search & Mode */}
+                        <div className="flex items-center gap-3">
+                            <button
+                                onClick={() => setIsSearchOpen(true)}
+                                className="p-2 hover:bg-accent rounded-md transition-colors"
+                                aria-label="Search"
+                            >
+                                <Search className="w-5 h-5" />
+                            </button>
+                            <ModeToggler />
+                        </div>
                     </div>
                 </div>
             </header>
@@ -122,6 +154,9 @@ const Header = () => {
                     </div>
                 </div>
             )}
+
+            {/* Search Modal */}
+            <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
         </>
     );
 };

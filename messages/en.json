@@ -171,7 +171,17 @@
     "navItems": {
         "home": "Home",
         "about": "About",
+        "blog": "Blog",
         "contact": "Contact Us"
+    },
+    "Search": {
+        "placeholder": "Search tents, services, articles...",
+        "noResults": "No results found",
+        "posts": "Articles",
+        "tents": "Tents",
+        "services": "Services",
+        "viewAll": "View all results",
+        "searching": "Searching..."
     },
     "LoginForm": {
         "welcomeBack": "Welcome back",
@@ -566,6 +576,32 @@
     },
     "ScrollToTop": {
         "label": "Scroll to top"
+    },
+    "BlogSection": {
+        "subtitle": "Our Blog",
+        "title": "Latest Articles",
+        "description": "Explore our articles and tips about tents and events",
+        "noPosts": "No posts available at the moment",
+        "readMore": "Read More"
+    },
+    "BlogPage": {
+        "seo": {
+            "title": "Blog - Riyadh Tents",
+            "description": "Explore our articles and tips about tents, events, and occasions. Your comprehensive guide to the world of tents in Saudi Arabia."
+        },
+        "hero": {
+            "subtitle": "Blog",
+            "title": "Articles & Tips",
+            "description": "Discover the latest articles and tips about tents, events, and occasions"
+        },
+        "noPosts": "No posts available at the moment"
+    },
+    "BlogPostPage": {
+        "backToBlog": "Back to Blog",
+        "publishedOn": "Published on",
+        "relatedPosts": "Related Posts",
+        "sharePost": "Share Post",
+        "tags": "Tags"
     },
     "dashboard": {
         "sidebar": {
