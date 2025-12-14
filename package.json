@@ -15,7 +15,8 @@
     "db:seed:website": "tsx scripts/seed-website.ts",
     "db:seed:tent-details": "tsx scripts/seed-tent-details.ts",
     "db:seed:descriptions": "tsx scripts/seed-new-description.ts",
-    "db:seed:blog": "tsx scripts/seed-blog.ts"
+    "db:seed:blog": "tsx scripts/seed-blog.ts",
+    "db:seed:weather-article": "tsx scripts/seed-weather-article.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
